@@ -3,14 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6D821624B0663EF39C0E34D2 /* Pods_First_Brew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFF9EC7B296BC134AE8F165 /* Pods_First_Brew.framework */; };
+		7A3E49B224CE5EFA00C8F99A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B124CE5EFA00C8F99A /* Drink.swift */; };
+		7A3E49B424CE628000C8F99A /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B324CE628000C8F99A /* FirebaseReference.swift */; };
+		7A3E49B624CE63EE00C8F99A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B524CE63EE00C8F99A /* Constants.swift */; };
 		7A98ECAA24CBDE0600546DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECA924CBDE0600546DEC /* AppDelegate.swift */; };
 		7A98ECAC24CBDE0600546DEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */; };
-		7A98ECAE24CBDE0600546DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECAD24CBDE0600546DEC /* ContentView.swift */; };
+		7A98ECAE24CBDE0600546DEC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECAD24CBDE0600546DEC /* HomeView.swift */; };
 		7A98ECB024CBDE1900546DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECAF24CBDE1900546DEC /* Assets.xcassets */; };
 		7A98ECB324CBDE1900546DEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECB224CBDE1900546DEC /* Preview Assets.xcassets */; };
 		7A98ECB624CBDE1900546DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECB424CBDE1900546DEC /* LaunchScreen.storyboard */; };
@@ -21,10 +24,13 @@
 		1BFF9EC7B296BC134AE8F165 /* Pods_First_Brew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_Brew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB40934F9A686AE51A5566B /* Pods-First Brew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First Brew.release.xcconfig"; path = "Target Support Files/Pods-First Brew/Pods-First Brew.release.xcconfig"; sourceTree = "<group>"; };
 		562165240ED13799C6C9F4C6 /* Pods-First Brew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First Brew.debug.xcconfig"; path = "Target Support Files/Pods-First Brew/Pods-First Brew.debug.xcconfig"; sourceTree = "<group>"; };
+		7A3E49B124CE5EFA00C8F99A /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		7A3E49B324CE628000C8F99A /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
+		7A3E49B524CE63EE00C8F99A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7A98ECA624CBDE0600546DEC /* First Brew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Brew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A98ECA924CBDE0600546DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A98ECAD24CBDE0600546DEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A98ECAD24CBDE0600546DEC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A98ECAF24CBDE1900546DEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A98ECB224CBDE1900546DEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A98ECB524CBDE1900546DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +50,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A3E49B724CE683400C8F99A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E49B324CE628000C8F99A /* FirebaseReference.swift */,
+				7A3E49B524CE63EE00C8F99A /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7A3E49B824CE684D00C8F99A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7A3E49B124CE5EFA00C8F99A /* Drink.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7A98EC9D24CBDE0600546DEC = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +90,9 @@
 			children = (
 				7A98ECA924CBDE0600546DEC /* AppDelegate.swift */,
 				7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */,
-				7A98ECAD24CBDE0600546DEC /* ContentView.swift */,
+				7A98ECAD24CBDE0600546DEC /* HomeView.swift */,
+				7A3E49B824CE684D00C8F99A /* Models */,
+				7A3E49B724CE683400C8F99A /* Helpers */,
 				7A98ECAF24CBDE1900546DEC /* Assets.xcassets */,
 				7A98ECB424CBDE1900546DEC /* LaunchScreen.storyboard */,
 				7A98ECB724CBDE1900546DEC /* Info.plist */,
@@ -99,7 +124,6 @@
 				562165240ED13799C6C9F4C6 /* Pods-First Brew.debug.xcconfig */,
 				2BB40934F9A686AE51A5566B /* Pods-First Brew.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -219,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3E49B424CE628000C8F99A /* FirebaseReference.swift in Sources */,
 				7A98ECAA24CBDE0600546DEC /* AppDelegate.swift in Sources */,
 				7A98ECAC24CBDE0600546DEC /* SceneDelegate.swift in Sources */,
-				7A98ECAE24CBDE0600546DEC /* ContentView.swift in Sources */,
+				7A3E49B224CE5EFA00C8F99A /* Drink.swift in Sources */,
+				7A98ECAE24CBDE0600546DEC /* HomeView.swift in Sources */,
+				7A3E49B624CE63EE00C8F99A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
