@@ -9,22 +9,37 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var drinkListener = DrinkListener()
+    
+    var categories: [String : [Drink]] {
+        .init(
+            grouping: drinkListener.drinks,
+            by: {$0.category.rawValue}
+        )
+    }
+    
     var body: some View {
         NavigationView {
-            Text("Test Text")
-                .navigationBarTitle(Text("First Brew"))
-                .navigationBarItems(leading:
-                    Button(action: {
-                        print("log out")
-                        createMenu()
-                    }, label: {
-                        Text("Log Out")
-                    }), trailing:
-                    Button(action: {
-                        print("cart")
-                    }, label: {
-                        Image("basket")
-                    })
+            List(categories.keys.sorted(), id: \String.self) {
+                key in
+                
+                DrinkRow(categoryName: "\(key) Drink".uppercased(), drinks: self.categories[key]!)
+                    .frame(height: 320)
+                    .padding(.top)
+                    .padding(.bottom)
+            }
+            .navigationBarTitle(Text("First Brew"))
+            .navigationBarItems(leading:
+                Button(action: {
+                    print("log out")
+                }, label: {
+                    Text("Log Out")
+                }), trailing:
+                Button(action: {
+                    print("cart")
+                }, label: {
+                    Image("basket")
+                })
             )
         }
     }

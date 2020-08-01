@@ -11,6 +11,8 @@
 		7A3E49B224CE5EFA00C8F99A /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B124CE5EFA00C8F99A /* Drink.swift */; };
 		7A3E49B424CE628000C8F99A /* FirebaseReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B324CE628000C8F99A /* FirebaseReference.swift */; };
 		7A3E49B624CE63EE00C8F99A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B524CE63EE00C8F99A /* Constants.swift */; };
+		7A3E49BA24D5248100C8F99A /* DrinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49B924D5248000C8F99A /* DrinkRow.swift */; };
+		7A3E49BC24D52AA400C8F99A /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3E49BB24D52AA400C8F99A /* DrinkItem.swift */; };
 		7A98ECAA24CBDE0600546DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECA924CBDE0600546DEC /* AppDelegate.swift */; };
 		7A98ECAC24CBDE0600546DEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */; };
 		7A98ECAE24CBDE0600546DEC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98ECAD24CBDE0600546DEC /* HomeView.swift */; };
@@ -18,6 +20,7 @@
 		7A98ECB324CBDE1900546DEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECB224CBDE1900546DEC /* Preview Assets.xcassets */; };
 		7A98ECB624CBDE1900546DEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECB424CBDE1900546DEC /* LaunchScreen.storyboard */; };
 		7A98ECBE24CBE53100546DEC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A98ECBD24CBE53000546DEC /* GoogleService-Info.plist */; };
+		7AAFB7AE24D5F73900859D39 /* DrinkListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AAFB7AD24D5F73800859D39 /* DrinkListener.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,8 @@
 		7A3E49B124CE5EFA00C8F99A /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		7A3E49B324CE628000C8F99A /* FirebaseReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReference.swift; sourceTree = "<group>"; };
 		7A3E49B524CE63EE00C8F99A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7A3E49B924D5248000C8F99A /* DrinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRow.swift; sourceTree = "<group>"; };
+		7A3E49BB24D52AA400C8F99A /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
 		7A98ECA624CBDE0600546DEC /* First Brew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First Brew.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A98ECA924CBDE0600546DEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 		7A98ECB524CBDE1900546DEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A98ECB724CBDE1900546DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A98ECBD24CBE53000546DEC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7AAFB7AD24D5F73800859D39 /* DrinkListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkListener.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +94,12 @@
 		7A98ECA824CBDE0600546DEC /* First Brew */ = {
 			isa = PBXGroup;
 			children = (
+				7AAFB7AF24D5F73E00859D39 /* Firebase Listeners */,
 				7A98ECA924CBDE0600546DEC /* AppDelegate.swift */,
 				7A98ECAB24CBDE0600546DEC /* SceneDelegate.swift */,
 				7A98ECAD24CBDE0600546DEC /* HomeView.swift */,
+				7A3E49B924D5248000C8F99A /* DrinkRow.swift */,
+				7A3E49BB24D52AA400C8F99A /* DrinkItem.swift */,
 				7A3E49B824CE684D00C8F99A /* Models */,
 				7A3E49B724CE683400C8F99A /* Helpers */,
 				7A98ECAF24CBDE1900546DEC /* Assets.xcassets */,
@@ -108,6 +117,14 @@
 				7A98ECB224CBDE1900546DEC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7AAFB7AF24D5F73E00859D39 /* Firebase Listeners */ = {
+			isa = PBXGroup;
+			children = (
+				7AAFB7AD24D5F73800859D39 /* DrinkListener.swift */,
+			);
+			path = "Firebase Listeners";
 			sourceTree = "<group>";
 		};
 		851FDA500A95FFF6FB559277 /* Frameworks */ = {
@@ -244,7 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A3E49B424CE628000C8F99A /* FirebaseReference.swift in Sources */,
+				7A3E49BC24D52AA400C8F99A /* DrinkItem.swift in Sources */,
 				7A98ECAA24CBDE0600546DEC /* AppDelegate.swift in Sources */,
+				7A3E49BA24D5248100C8F99A /* DrinkRow.swift in Sources */,
+				7AAFB7AE24D5F73900859D39 /* DrinkListener.swift in Sources */,
 				7A98ECAC24CBDE0600546DEC /* SceneDelegate.swift in Sources */,
 				7A3E49B224CE5EFA00C8F99A /* Drink.swift in Sources */,
 				7A98ECAE24CBDE0600546DEC /* HomeView.swift in Sources */,
