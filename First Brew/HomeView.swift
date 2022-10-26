@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State private var showingBasket = false
     @ObservedObject var drinkListener = DrinkListener()
     
     var categories: [String : [Drink]] {
@@ -36,10 +37,13 @@ struct HomeView: View {
                     Text("Log Out")
                 }), trailing:
                 Button(action: {
-                    print("cart")
+                    self.showingBasket.toggle()
                 }, label: {
                     Image("basket")
                 })
+                    .sheet(isPresented: $showingBasket) {
+                        OrderBasketView()
+                }
             )
         }
     }
